@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+
+        <div class="shadow card" style="width: 30rem;border-radius: 16px; ">
+            <div class="shaa">
+            <div class="card-body" style="background-color: #2C3E50  ">
+                <h4 class="card-title">Priority :{{tas.prio}}</h4>
+                <h3>Date : {{tas.date}}</h3>
+                <h2>{{tas.name}}</h2>
+                <a  href="{% url 'todoapp:update' tas.id %}" class="btn btn-success">Update</a>
+                <a  href="{% url 'todoapp:delete' tas.id %}" class="btn btn-danger">Done</a>
+
+            </div>
+</div>
+        </div><br>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="shaa" style="padding:12px;background-color:black">
+        <form method="post" >
+    {% csrf_token %}
+
+    <h2>Do you want to <b>delete</b> this task from list ?</h2><br>
+
+    <button type="submit" class="btn btn-danger">Yes</button>
+        <a href="{% url 'todoapp:index' %}" class="btn btn-primary">No</a>
+
+</form>
+
+    </div>
+
+</div>
+
+{% endblock %}
